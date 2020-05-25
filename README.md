@@ -17,7 +17,7 @@ const {
   ServiceUnavailableException,
   UnauthorizedException,
   UnprocessableEntityException,
-} = require('./index');
+} = require('./src');
 
 throw new NotFoundException('Record not found');
 
