@@ -19,12 +19,14 @@ const {
   UnprocessableEntityException,
 } = require('./src');
 
+* 1
 throw new NotFoundException('Record not found');
 
-const error = new BadGatewayException('Invalid arguments');
+* 2
+const error = new ConflictException('Record already exist with that name');
 console.log(error.status); // 409
 console.log(error.error); // conflict
-console.log(error.message); // Invalid arguments
+console.log(error.message); // Record already exist with that name
 
 
 | Exception                                |  status  |         error         |   message   |
